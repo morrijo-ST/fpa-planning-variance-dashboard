@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: fpa-planning-variance-dashboard
+    runtime: python
+    plan: free
+    region: ohio
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run app.py --server.address 0.0.0.0 --server.port $PORT
+    autoDeploy: true
